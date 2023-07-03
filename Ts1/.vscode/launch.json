@@ -1,0 +1,8 @@
+
+{
+  "type": "node",
+  "request": "launch",
+  "name": "Debug TypeScript",
+  "program": "${workspaceFolder}/node_modules/typescript/bin/tsc",
+  "args": ["--noEmit", "--watch", "--pretty"]
+}
