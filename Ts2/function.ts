@@ -30,9 +30,11 @@ const names3 = 'abdullahi3'
 console.log(introduce('welcome',names2,names3))
 
 export function getName(user:{firstName: string, lastName: string, age: number}): string{
- return `My name is ${user.firstName} ${user.lastName} I am ${user.age} years old`
+ return `My name is ${user?.firstName ?? '(firstName)'} ${user?.lastName ?? '(LastName)'} I am ${user?.age ?? "(age)"} years old`
 }
 
 console.log(getName({firstName:'usman', lastName:'abdullahi', age:30}))
+
+console.log(getName())
 
 // JavaScript is not checking for errors at runtime only does it at compiled time, while typescript checks for errors at runtime
