@@ -4,3 +4,12 @@ function getName(user){
 console.log(getName({first:'abdull', last:'usman', age:400}))
 
 // I actually haven't try if passing object as a parameter in javaScript is possible but got to know more today, it's really amazing to learnign TypeScript
+
+
+const creatAdder = (num) => {
+ return val => num+val
+}
+
+const addOne = creatAdder(1)
+
+console.log(addOne(88))
