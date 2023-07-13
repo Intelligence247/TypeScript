@@ -46,3 +46,6 @@ console.log(
 console.log(
  findHouses(JSON.stringify(houses), ({ name })=> name === "Corrino")
 );
+const json = JSON.parse("55");
+
+console.log(typeof json)
