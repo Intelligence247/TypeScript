@@ -85,3 +85,56 @@ const graph: [number, number] = [55.2, 41.3];
 const [x, y] = graph;
 console.log(graph)
 console.log(x)
+
+const car: {type: string, model: string, year?: number} = {
+ type: "Toyota",
+ model: "Corolla",
+}
+
+console.log(car)
+
+// As anything is specified in typescript it must be included as we, else it will throuw an error, the only way to solve this issue is using question mark to denote it as an optional value
+
+
+// Learning Enums
+
+
+enum CardinalDirections {
+ North,
+ East,
+ South,
+ West,
+}
+
+let currentDirection = CardinalDirections.North;
+console.log(currentDirection)
+console.log(CardinalDirections.East)
+console.log(CardinalDirections.South)
+console.log(CardinalDirections.West)
+enum CardinalDirections2 {
+ North = 1,
+ East,
+ South,
+ West,
+}
+console.log(CardinalDirections2.West)
+// The value in the enums increment
+enum StatusCodes {
+ NotFound = 404,
+ Success = 200,
+ Accepted = 202,
+ BadRequest = 400,
+}
+
+console.log(StatusCodes.BadRequest)
+
+// This is a fully initiallised enums
+
+enum CardinalDirections3 {
+ North = 'North',
+ East = 'East' ,
+ South = "South",
+ West = "West"
+};
+
+// Technically, you can mix and match string and numeric enum values, but it is recommended not to do so.
