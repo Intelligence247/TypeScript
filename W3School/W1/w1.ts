@@ -138,3 +138,55 @@ enum CardinalDirections3 {
 };
 
 // Technically, you can mix and match string and numeric enum values, but it is recommended not to do so.
+
+
+
+
+
+
+
+// Learning Aliases and Interfaces
+// TypeScript allows types to be defined separately from the variables that use them.
+// Aliases and Interfaces allows types to be easily shared between different variables/objects.
+
+
+type CarYear = number
+type CarType = string
+type CarModel = string | number
+
+type Car = {
+ year: CarYear,
+ type?: CarType,
+ model?: CarModel
+}
+
+const carYear: CarYear = 2001
+const carType: CarType = 'Toyota'
+const carModel: CarModel = "Corolla"
+const carObj: Car = {
+ year: carYear,
+ type: carType,
+ model: carModel
+}
+console.log(carObj)
+
+interface Rectangle {
+ height: number,
+ width: number
+}
+const rectangle: Rectangle = {
+ height:20,
+ width: 10
+}
+// Extending Interfaces
+// Extending an interface means you are creating a new interface with the same properties as the original, plus something new.
+
+interface ColoredRectangle extends Rectangle {
+ color: string;
+}
+
+const coloredRectangle: ColoredRectangle = {
+ height: 20,
+ width: 10,
+ color: '#3345fa'
+}
