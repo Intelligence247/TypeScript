@@ -7,4 +7,4 @@ function add3DCoordinate(
 ): ThreeDCoordinate {
  return [c1[0] + c2[0], c1[1] + c2[1], c1[2] + c2[2] ]
 }
-
+ console.log(add3DCoordinate([0,10,0], [10,20,30]))
