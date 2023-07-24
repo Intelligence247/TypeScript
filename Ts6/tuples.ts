@@ -8,3 +8,24 @@ function add3DCoordinate(
  return [c1[0] + c2[0], c1[1] + c2[1], c1[2] + c2[2] ]
 }
  console.log(add3DCoordinate([0,10,0], [10,20,30]))
+
+
+ 
+ function simpleStringState(initial: string): [() => string, (v: string) => void]{
+   let str: string = initial;
+   return[
+    () => str,
+    (v: string) => {
+     str = v;
+    }
+   ]
+ }
+ 
+ const [str1getter, str1setter] = simpleStringState("hello");
+ const [str2getter, str2setter] = simpleStringState("I am hear usestate 2");
+ console.log(str1getter())
+ str1setter('goodbye')
+ console.log(str1getter())
+ str2setter('What a world')
+ console.log(str2getter())
+ 
